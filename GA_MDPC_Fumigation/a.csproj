@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3EE94DDB-70DC-4E10-8A47-537D38044291}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GA_MDPC_Fumigation</RootNamespace>
+    <AssemblyName>GA_MDPC_Fumigation</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>Controller\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\Controller_AES.cs" />
+    <Compile Include="Controller\Controller_Connection_String.cs" />
+    <Compile Include="Controller\Controller_Running_No.cs" />
+    <Compile Include="Controller\Controller_SystemLog.cs" />
+    <Compile Include="LINQ\Linq_Fumigation.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Linq_Fumigation.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ\Linq_System.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Linq_System.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI_Module\Basic\frm_authorized_signature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_authorized_signature.Designer.cs">
+      <DependentUpon>frm_authorized_signature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_chemical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_chemical.Designer.cs">
+      <DependentUpon>frm_chemical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_concentration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_concentration.Designer.cs">
+      <DependentUpon>frm_concentration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_consignee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_consignee.Designer.cs">
+      <DependentUpon>frm_consignee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_conveyance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_conveyance.Designer.cs">
+      <DependentUpon>frm_conveyance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_destination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_destination.Designer.cs">
+      <DependentUpon>frm_destination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_exporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_exporter.Designer.cs">
+      <DependentUpon>frm_exporter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_exposure_period.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_exposure_period.Designer.cs">
+      <DependentUpon>frm_exposure_period.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_place_of_loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_place_of_loading.Designer.cs">
+      <DependentUpon>frm_place_of_loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_temperature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_temperature.Designer.cs">
+      <DependentUpon>frm_temperature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_unit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Basic\frm_unit.Designer.cs">
+      <DependentUpon>frm_unit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Fumigation\frm_fumigation_certifacte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Fumigation\frm_fumigation_certifacte.Designer.cs">
+      <DependentUpon>frm_fumigation_certifacte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Fumigation\frm_fumigation_certifactes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Fumigation\frm_fumigation_certifactes.Designer.cs">
+      <DependentUpon>frm_fumigation_certifactes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Log_In\frm_Log_In.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Log_In\frm_Log_In.Designer.cs">
+      <DependentUpon>frm_Log_In.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Main\frm_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Main\frm_main.Designer.cs">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Selection\Select_authorized_signature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Selection\Select_authorized_signature.Designer.cs">
+      <DependentUpon>Select_authorized_signature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_chemical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_chemical.Designer.cs">
+      <DependentUpon>select_chemical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_concentration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_concentration.Designer.cs">
+      <DependentUpon>select_concentration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_consignee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_consignee.Designer.cs">
+      <DependentUpon>select_consignee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_conveyance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_conveyance.Designer.cs">
+      <DependentUpon>select_conveyance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_destination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_destination.Designer.cs">
+      <DependentUpon>select_destination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_exporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_exporter.Designer.cs">
+      <DependentUpon>select_exporter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_exposure_period.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_exposure_period.Designer.cs">
+      <DependentUpon>select_exposure_period.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_PlaceOfLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_PlaceOfLoading.Designer.cs">
+      <DependentUpon>select_PlaceOfLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_temperature.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_temperature.Designer.cs">
+      <DependentUpon>select_temperature.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_units.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\Selection\select_units.Designer.cs">
+      <DependentUpon>select_units.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Module\System_Main\frm_password_change.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Module\System_Main\frm_password_change.Designer.cs">
+      <DependentUpon>frm_password_change.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI_Module\Fumigation\frm_fumigation_certifacte.resx">
+      <DependentUpon>frm_fumigation_certifacte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Fumigation\frm_fumigation_certifactes.resx">
+      <DependentUpon>frm_fumigation_certifactes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Selection\Select_authorized_signature.resx">
+      <DependentUpon>Select_authorized_signature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Selection\select_chemical.resx">
+      <DependentUpon>select_chemical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Selection\select_concentration.resx">
+      <DependentUpon>select_concentration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Selection\select_consignee.resx">
+      <DependentUpon>select_consignee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Selection\select_conveyance.resx">
+      <DependentUpon>select_conveyance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Selection\select_destination.resx">
+      <DependentUpon>select_destination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Selection\select_exporter.resx">
+      <DependentUpon>select_exporter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Selection\select_exposure_period.resx">
+      <DependentUpon>select_exposure_period.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Selection\select_PlaceOfLoading.resx">
+      <DependentUpon>select_PlaceOfLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Selection\select_temperature.resx">
+      <DependentUpon>select_temperature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Selection\select_units.resx">
+      <DependentUpon>select_units.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\System_Main\frm_password_change.resx">
+      <DependentUpon>frm_password_change.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="LINQ\Linq_Fumigation.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Linq_Fumigation.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LINQ\Linq_System.dbml.layout">
+      <DependentUpon>Linq_System.dbml</DependentUpon>
+    </None>
+    <None Include="LINQ\Linq_Fumigation.dbml.layout">
+      <DependentUpon>Linq_Fumigation.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI_Module\Basic\frm_authorized_signature.resx">
+      <DependentUpon>frm_authorized_signature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Basic\frm_chemical.resx">
+      <DependentUpon>frm_chemical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Basic\frm_concentration.resx">
+      <DependentUpon>frm_concentration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Basic\frm_consignee.resx">
+      <DependentUpon>frm_consignee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Basic\frm_conveyance.resx">
+      <DependentUpon>frm_conveyance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Basic\frm_destination.resx">
+      <DependentUpon>frm_destination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Basic\frm_exporter.resx">
+      <DependentUpon>frm_exporter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Basic\frm_exposure_period.resx">
+      <DependentUpon>frm_exposure_period.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Basic\frm_place_of_loading.resx">
+      <DependentUpon>frm_place_of_loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Basic\frm_temperature.resx">
+      <DependentUpon>frm_temperature.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Basic\frm_unit.resx">
+      <DependentUpon>frm_unit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Log_In\frm_Log_In.resx">
+      <DependentUpon>frm_Log_In.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Module\Main\frm_main.resx">
+      <DependentUpon>frm_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="LINQ\Linq_System.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Linq_System.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
