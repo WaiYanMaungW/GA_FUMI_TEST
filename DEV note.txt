@@ -1,0 +1,5 @@
+-Need Devexpress for UI and database name is GA_MDPC_FUMIGATION. 
+
+-Before run make sure to change in connection string for dbconnect. (config file or can change in setting in project)
+
+-Login user name-admin and password-9999

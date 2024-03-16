@@ -58,16 +58,18 @@ namespace GA_MDPC_Fumigation
         }
         public static string get_main_connection()
         {
-            string result;
-            try
-            {
-                return result = Controller_AES.Decrypt(Program.get_program_registery_value("GA_MDPC_FUMIGATION"), "GA_Connect");
-            }
-            catch
-            {
-                return result = Properties.Settings.Default["GA_MDPC_FUMIGATION"].ToString();
+            return Properties.Settings.Default["GA_MDPC_FUMIGATION"].ToString();
+            //for register key
+            //string result;
+            //try
+            //{
+            //    return result = Controller_AES.Decrypt(Program.get_program_registery_value("GA_MDPC_FUMIGATION"), "GA_Connect");
+            //}
+            //catch
+            //{
+            //    return result = Properties.Settings.Default["GA_MDPC_FUMIGATION"].ToString();
 
-            }
+            //}
 
 
         }
